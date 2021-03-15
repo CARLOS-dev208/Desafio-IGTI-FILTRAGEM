@@ -110,6 +110,7 @@ function clonaTabela(dadosEmployees, roles) {
         clonaEstrutura.querySelector("#salary").innerHTML = item.salary
         document.querySelector("tbody").append(clonaEstrutura)
     })
+    console.log(dadosEmployees.length)
 }
 
 function carregaElementosCheckbox() {
