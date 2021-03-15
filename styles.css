@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteiner {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background-size: 300% 300%;
+    animation: gradient 10s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.camposDeFiltos {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    border-right: 1px solid rgba(0, 0, 0, 1);
+}
+
+.camposDeFiltos h1 {
+    font-size: 2rem;
+    align-self: start;
+    color: #eee;
+}
+
+.camposDeFiltos label {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #eee;
+}
+
+.camposDeFiltos select {
+    height: 2rem;
+    width: 100%;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.camposDeFiltos fieldset {
+    margin-top: 2.4rem;
+    width: 100%;
+    height: 55%;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #eee;
+}
+
+.filtro div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5px;
+}
+
+.camposDeFiltos fieldset div label {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    display: block;
+    margin-left: 4px;
+}
+
+.dadosDaTabela {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+}
+
+.dadosDaTabela h1 {
+    font-size: 2rem;
+    align-self: start;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.scrollTabela {
+    height: 500px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.scrollTabela table {
+    border-spacing: 1px 2px;
+    width: 100%;
+}
+
+.scrollTabela table thead {
+    text-align: left;
+}
+
+td,
+th {
+    padding: 10px;
+    color: white;
+}
+
+.scrollTabela table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #ccc;
+    color: black;
+}
+
+.scrollTabela table thead th:nth-child(4) {
+    text-align: right;
+}
+
+.scrollTabela table tbody td:nth-child(4) {
+    text-align: right;
+}
+
+.scrollTabela table tbody tr:nth-child(even) {
+    background: linear-gradient(45deg, #b433ff, #284aff);
+}
+
+.scrollTabela table tbody tr:hover {
+    background: linear-gradient(45deg, #284aff, #b433ff);
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    .conteiner {
+        grid-template-columns: 1fr;
+    }
+}
