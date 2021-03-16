@@ -11,12 +11,8 @@ function fetchJson(url) {
 async function carregaDados() {
     const employees = await fetchJson("http://localhost:3000/employees");
     const roles = await fetchJson("http://localhost:3000/roles");
-    employees.forEach((item) => {
-        dadosEmployees.push(item)
-    })
-    roles.forEach((item) => {
-        dadosRoles.push(item);
-    })
+    dadosEmployees.push(...employees)
+    dadosRoles.push(...roles);
     selectOption();
     carregaElementosCheckbox()
 }
@@ -110,7 +106,7 @@ function clonaTabela(dadosEmployees, roles) {
         clonaEstrutura.querySelector("#salary").innerHTML = item.salary
         document.querySelector("tbody").append(clonaEstrutura)
     })
-    console.log(dadosEmployees.length)
+    document.querySelector('.dadosDaTabela h1').textContent = `Employees (${dadosEmployees.length})`
 }
 
 function carregaElementosCheckbox() {
@@ -123,13 +119,10 @@ function carregaElementosCheckbox() {
         cloneCheckbox.querySelector('div  label').innerText = item.name
         document.querySelector('fieldset').appendChild(cloneCheckbox)
     });
-
-
 }
 
 function selectCheckbox() {
     select = [...document.querySelectorAll('.role')].
     filter(el => el.checked).map(el => el.name)
-
     document.querySelector('select').addEventListener('change', selectOption())
 }

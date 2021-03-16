@@ -144,8 +144,9 @@ th {
     cursor: pointer;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 870px) {
     .conteiner {
+        height: 100%;
         grid-template-columns: 1fr;
     }
 }
