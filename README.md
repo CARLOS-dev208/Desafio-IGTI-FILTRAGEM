@@ -21,9 +21,7 @@
 
 ---
 
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62676357?s=400&u=c2e61c42fe62850dd3cd4b7b06cd894097ccfc45&v=4" border-radius="50%" width="150px;"
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62676357?s=400&u=c2e61c42fe62850dd3cd4b7b06cd894097ccfc45&v=4" width="150px;"
     height="150px;"  alt=""/>
- <br />
-  
 
-Feito com ❤️ por Carlos Eduardo Pereira De Sousa Silva 👋🏽 Entre em contato!
+   <p>Feito com ❤️ por Carlos Eduardo Pereira De Sousa Silva 👋🏽 Entre em contato!</p>
